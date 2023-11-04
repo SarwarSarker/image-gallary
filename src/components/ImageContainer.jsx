@@ -41,11 +41,11 @@ const ImageContainer = () => {
       <div className="max-w-5xl mx-auto my-2 md:my-10 shadow-2xl shadow-slate-500 rounded-2xl p-4 md:p-10">
         <ImageHeader isChecked={isChecked} deleteImage={deleteImage} />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {data.map((image, index) => (
             <div
               key={index}
-              className={`relative group cursor-pointer rounded-sm bg-white hover:bg-gray-300 ${
+              className={`relative group cursor-pointer rounded-md bg-white hover:bg-gray-300 ${
                 index === 0 ? "row-span-2 col-span-2" : ""
               }`}
               onMouseEnter={() => setHoverIndex(index)}
@@ -65,9 +65,9 @@ const ImageContainer = () => {
               <img
                 src={image}
                 alt={`Image-${index}`}
-                className="w-100 h-full object-cover border border-gray-300 rounded-sm"
+                className="w-full h-full object-cover border border-gray-300 rounded-md"
               />
-              <div className="hidden group-hover:block absolute overflow-hidden rounded-sm inset-0 bg-black bg-opacity-40 z-0"></div>
+              <div className="hidden group-hover:block absolute overflow-hidden rounded-md inset-0 bg-black bg-opacity-40 z-0"></div>
             </div>
           ))}
 
